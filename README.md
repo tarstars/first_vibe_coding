@@ -1,2 +1,18 @@
 # first_vibe_coding
-A simple vibe-coding project for telegram post
+
+Небольшое учебное приложение на Flask + HTML/CSS/JS для ведения простого TODO списка.
+
+## Быстрый старт
+1. Создайте виртуальное окружение и установите зависимости:
+   ```bash
+   python -m venv .venv
+   source .venv/bin/activate  # Windows: .venv\Scripts\activate
+   pip install -r requirements.txt
+   ```
+2. Запустите сервер:
+   ```bash
+   python app.py
+   ```
+3. Откройте браузер по адресу http://127.0.0.1:5000 и пользуйтесь TODO-листом: добавляйте дела, отмечайте выполненными и удаляйте ненужные.
+
+Заметка: данные хранятся в памяти процесса и очищаются при перезапуске сервера. Это удобно для обучения и экспериментов.

@@ -1,0 +1,177 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Manrope", "Segoe UI", "Trebuchet MS", sans-serif;
+  background: radial-gradient(circle at 20% 20%, #a9e6ff 0, transparent 30%),
+              radial-gradient(circle at 80% 0, #d3ffe4 0, transparent 25%),
+              linear-gradient(135deg, #0f8ba8, #0cbf9c);
+  color: #0f1f2a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 16px;
+}
+
+.page {
+  width: min(900px, 100%);
+}
+
+.hero {
+  color: #062433;
+  margin-bottom: 16px;
+}
+
+.hero__title {
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.hero__subtitle {
+  margin: 4px 0 0;
+  opacity: 0.8;
+  max-width: 520px;
+}
+
+.card {
+  background: #f8fcff;
+  border: 1px solid rgba(15, 139, 168, 0.1);
+  box-shadow: 0 12px 45px rgba(6, 53, 70, 0.16);
+  border-radius: 18px;
+  padding: 18px;
+}
+
+.add-row {
+  display: grid;
+  grid-template-columns: 1fr 140px;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.add-row input {
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(15, 139, 168, 0.2);
+  font-size: 16px;
+  background: white;
+  outline: none;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.add-row input:focus {
+  border-color: #0cbf9c;
+  box-shadow: 0 0 0 4px rgba(12, 191, 156, 0.18);
+}
+
+.add-row button {
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #0cbf9c, #0f8ba8);
+  color: #f8fcff;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+  box-shadow: 0 10px 25px rgba(12, 191, 156, 0.35);
+}
+
+.add-row button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 30px rgba(12, 191, 156, 0.45);
+}
+
+.add-row button:active {
+  transform: translateY(0);
+  opacity: 0.9;
+}
+
+.todo-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.todo-item {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 10px;
+  border-radius: 12px;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.todo-item + .todo-item {
+  margin-top: 6px;
+}
+
+.todo-item:hover {
+  background: rgba(15, 139, 168, 0.07);
+  transform: translateY(-1px);
+}
+
+.todo-checkbox {
+  width: 20px;
+  height: 20px;
+  accent-color: #0cbf9c;
+  cursor: pointer;
+}
+
+.todo-text {
+  font-size: 16px;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+.todo-text.done {
+  color: #6b7a86;
+  text-decoration: line-through;
+  opacity: 0.8;
+}
+
+.delete-btn {
+  border: none;
+  background: none;
+  color: #c53c3c;
+  font-weight: 700;
+  padding: 6px 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.1s ease;
+}
+
+.delete-btn:hover {
+  background: rgba(197, 60, 60, 0.08);
+}
+
+.delete-btn:active {
+  transform: translateY(1px);
+}
+
+.empty {
+  text-align: center;
+  color: #4f5a63;
+  padding: 22px 8px;
+  font-size: 15px;
+  border: 1px dashed rgba(15, 139, 168, 0.28);
+  border-radius: 12px;
+  background: rgba(12, 191, 156, 0.04);
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 22px 12px;
+  }
+
+  .add-row {
+    grid-template-columns: 1fr;
+  }
+
+  .add-row button {
+    width: 100%;
+  }
+}
